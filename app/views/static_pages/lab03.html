@@ -1,0 +1,279 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+	<title></title>
+	<meta name="keywords" content="" />
+	<meta name="description" content="" />
+	<link rel="stylesheet" href="style.css" type="text/css" media="screen, projection" />
+</head>
+
+<body>
+	<style =  "text/css">
+	.pic{
+    width: 950px;
+	}
+	.2pic{
+    width: 475px;
+	}
+	* {
+  margin:          0;
+  padding:         0;
+}
+html {
+  height:          100%;
+}
+body {
+  font:            12px/18px Arial, Tahoma, Verdana, sans-serif;
+  width:           100%;
+  height:          100%;
+  background: rgb(250, 255, 239);
+  font-size:       14px;
+}
+h1 {
+  font-size:       24px;
+  padding:         0px;
+  padding-bottom:  4px;
+  padding-top:     12px;
+  padding-left:    12px;
+  margin:          0px 0px 0px 0px;
+  color:           black;
+}
+h2 {
+  font-size:       18px;
+  padding:         0px;
+  padding-bottom:  4px;
+  padding-top:     12px;
+  padding-left:    12px;
+  margin:          0px 0px 0px 0px;
+}
+a {
+  color: rgb(52, 192, 17);
+  outline:         none;
+  text-decoration: underline;
+}
+a:hover {
+  color: rgb(59, 97, 21);
+  text-decoration: none;
+}
+a:visited {
+  color: rgb(59, 97, 21);
+  text-decoration: underline;
+}
+p {
+  margin:          0 0 18px
+  padding:         0px;
+  padding-bottom:  4px;
+  padding-top:     12px;
+  padding-left:    12px;
+}
+
+hr {
+  height: 1px;
+  color: rgb(18, 97, 18);
+  background-color: rgb(18, 97, 18);
+}
+
+ol {
+  margin:          0px; 
+  margin-top:      10px; 
+  margin-left:     20px; 
+  margin-bottom:   10px; 
+  padding:         0px; 
+  padding-left:    10px; 
+}
+
+ul {
+  margin:          0px; 
+  margin-top:      10px; 
+  margin-left:     20px; 
+  margin-bottom:   10px; 
+  padding:         0px; 
+  padding-left:    10px; 
+}
+
+li {
+  list-style:      circle; 
+}
+
+table {
+  border-spacing:  0; 
+  border-collapse: collapse;
+}
+table td, table th {
+  padding:         10; 
+}
+img {
+  border:          none;
+}
+input {
+  vertical-align:  middle;
+}
+#wrapper {
+  width:           1000px;
+  margin:          0 auto;
+  min-height:      90%;
+  height:          auto !important;
+  height:          100%;
+}
+
+.left {
+  padding:         0px;
+  padding-top:     12px;
+  padding-left:    12px;
+  float:           left;
+}
+
+.right {
+  padding:         0px;
+  padding-top:     12px;
+  padding-right:   12px;
+  float:           right;
+}
+
+
+/* Listing Items 
+-----------------------------------------------------------------------------*/
+#listing {
+  margin-top:      20px;
+  margin-left:     20px;
+}
+
+
+/* Section Heading
+-----------------------------------------------------------------------------*/
+#section {
+  height:          40px;
+  text-align:      center;
+}
+
+
+/* Header
+-----------------------------------------------------------------------------*/
+#header {
+  height:          50px;
+  background:      #BFF08E;
+  text-align:      center;
+}
+
+
+/* Middle
+-----------------------------------------------------------------------------*/
+#content {
+  padding:         0 0 100px;
+}
+
+
+/* Footer
+-----------------------------------------------------------------------------*/
+#footer {
+  height:          50px;
+  background:      #BFF08E;
+  margin-left:auto;
+  margin-right:auto;
+  width: 1000px;
+}
+
+	</style>
+<div id="wrapper">
+
+  <div id="header"> 
+  <div class="left"> <%= link_to 'Guidelines', '/static_pages/guidelines' %></div><h1>Lab 3</h1> </div>
+
+  <div id="content">
+    <div id="section"> <h1>Objectives</h1> </div>
+	<p>
+		After completing this lab you should be able to:
+		<ul>
+			<li>
+				Write an interface given an English description of the requirements.
+			</li>
+			<li>
+				Be able to implement an interface in your code.
+			</li>
+		</ul>
+	</p>
+
+<!-- ***************************** Pre-lab Exercises ******************************* -->
+    <div id="section"> <h1>Pre-Lab Exercises</h1> </div>
+    <p>
+    Complete this section individually before beginning the lab activities. This section will be due AT THE TIME YOUR LAB SECTION STARTS.
+    </p>
+	<p>
+		Exercise 1 </br>
+		<b>[2 points] </b>In lecture and in your readings (pp 323 - 329) you have seen examples of interfaces. Given the
+		following description of what and interface needs create and interface called <tt>PreLab.java</tt>.  Write the interface as if
+		it would be used in a project.
+	</p>
+	<p>
+		Classes that implement the interface you create must have methods to access and mutate a String variable called <tt>name</tt> and an integer
+		variable named <tt>count</tt>.  Classes must also have a <tt>toString()</tt> method that returns <tt>name</tt> and <tt>count</tt> as a String.
+		Finally, classes that implement the interface must have a method called <tt>length()</tt> that returns an integer value and take a String as a 
+		parameter.		
+		Hand in your answers before your lab section starts.
+	</p>
+<!-- ********************************* Activity 1 ********************************* -->
+    <div id="section"> <h1>Lab Activity - 8 points</h1> </div>
+   <p>
+<h2>What you are given:</h2>
+<ul>
+	<li>Your work from previous labs</li>
+</ul>
+
+<h2>What you have to do:</h2>
+<ul>
+    <li>In lecture you have examples of interfaces and seen the advantages 
+	    it gives, such as enforcing classes to have certain methods.  Today we will be making 
+	    changes to the <tt>FeedMe</tt> game to take advantage of this fact so that we 
+		can enforce that all items that move on the screen, called <tt>Sprites</tt>, share
+        the same methods.
+	</li>
+	<li><b>[1 point]</b> Rename the current <tt>Sprite</tt> class, call it <tt>Monster</tt>.
+	</li>
+	<li><b>[1 point]</b>Create a new interface and call it <tt>Sprite</tt>.  You create interfaces the
+	    same way as you create classes in Eclipse.  Just click Interface instead of Class.
+	</li>
+	<li><b>[2 points]</b>Make a list of all methods common to BOTH the <tt>Fruit</tt> and <tt>Monster</tt> classes.
+	    Write this list in a .txt file called <tt>similarities.txt</tt>
+	</li>
+	<li><b>[2 points]</b>Add all of these methods to the <tt>Sprite</tt> interface.  
+	</li>
+	<li><b>[2 points]</b>Make the <tt>Monster</tt> and <tt>Fruit</tt> classes use the new <tt>Sprite</tt> interface.  This is
+	    done with the use of the implements keyword.  Make sure that you have no errors in your project.
+	</li>
+	<li>All done!  Now you know that our <tt>Monster</tt> and <tt>Fruit</tt> classes will have to have the methods you
+	    declared in the interface.
+	</li>
+</ul>
+
+<h2>What you should think about during this activity:</h2>
+<ul>
+    <li>What are the other advantages of interfaces?</li>
+	<li>What are some possible disadvantages of interfaces?</li>
+	<li>Why do we need to have no method bodies in interfaces?</li>
+	<li>We didn't use any constants in our interface.  If we had, they would need to have been 
+	    <tt>static</tt>.  Why are constants <tt>static</tt> in interfaces?
+	</li>
+</ul>
+</p>
+    
+<!-- ********************************* Submission ********************************* -->
+    <div id="section"> <h1>What to Submit</h1> </div>
+    <p>
+    When you are ready to have your lab graded, submit the following:
+    </p>
+    <ul>
+    <li> <i>Replace this text with step-by-step instructions, add instructions as needed</i> </li>
+    </ul>
+
+  </div><!-- #content-->
+
+</div><!-- #wrapper -->
+
+  <div id="footer">
+    <div class="left">  <%= link_to 'Prev Lab', '/static_pages/lab02' %> </div>
+    <div class="right"> <%= link_to 'Next Lab', '/static_pages/lab04' %></div>
+  </div><!-- #footer -->
+
+
+</body>
+</html>

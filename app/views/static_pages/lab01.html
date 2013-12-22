@@ -1,0 +1,328 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+	<title></title>
+	<meta name="keywords" content="" />
+	<meta name="description" content="" />
+	<link rel="stylesheet" href="style.css" type="text/css" media="screen, projection" />
+</head>
+
+<body>
+	<style =  "text/css">
+	.pic{
+    width: 950px;
+	}
+	.2pic{
+    width: 475px;
+	}
+	* {
+  margin:          0;
+  padding:         0;
+}
+html {
+  height:          100%;
+}
+body {
+  font:            12px/18px Arial, Tahoma, Verdana, sans-serif;
+  width:           100%;
+  height:          100%;
+  background: rgb(250, 255, 239);
+  font-size:       14px;
+}
+h1 {
+  font-size:       24px;
+  padding:         0px;
+  padding-bottom:  4px;
+  padding-top:     12px;
+  padding-left:    12px;
+  margin:          0px 0px 0px 0px;
+  color:           black;
+}
+h2 {
+  font-size:       18px;
+  padding:         0px;
+  padding-bottom:  4px;
+  padding-top:     12px;
+  padding-left:    12px;
+  margin:          0px 0px 0px 0px;
+}
+a {
+  color: rgb(52, 192, 17);
+  outline:         none;
+  text-decoration: underline;
+}
+a:hover {
+  color: rgb(59, 97, 21);
+  text-decoration: none;
+}
+a:visited {
+  color: rgb(59, 97, 21);
+  text-decoration: underline;
+}
+p {
+  margin:          0 0 18px
+  padding:         0px;
+  padding-bottom:  4px;
+  padding-top:     12px;
+  padding-left:    12px;
+}
+
+hr {
+  height: 1px;
+  color: rgb(18, 97, 18);
+  background-color: rgb(18, 97, 18);
+}
+
+ol {
+  margin:          0px; 
+  margin-top:      10px; 
+  margin-left:     20px; 
+  margin-bottom:   10px; 
+  padding:         0px; 
+  padding-left:    10px; 
+}
+
+ul {
+  margin:          0px; 
+  margin-top:      10px; 
+  margin-left:     20px; 
+  margin-bottom:   10px; 
+  padding:         0px; 
+  padding-left:    10px; 
+}
+
+li {
+  list-style:      circle; 
+}
+
+table {
+  border-spacing:  0; 
+  border-collapse: collapse;
+}
+table td, table th {
+  padding:         10; 
+}
+img {
+  border:          none;
+}
+input {
+  vertical-align:  middle;
+}
+#wrapper {
+  width:           1000px;
+  margin:          0 auto;
+  min-height:      90%;
+  height:          auto !important;
+  height:          100%;
+}
+
+.left {
+  padding:         0px;
+  padding-top:     12px;
+  padding-left:    12px;
+  float:           left;
+}
+
+.right {
+  padding:         0px;
+  padding-top:     12px;
+  padding-right:   12px;
+  float:           right;
+}
+
+
+/* Listing Items 
+-----------------------------------------------------------------------------*/
+#listing {
+  margin-top:      20px;
+  margin-left:     20px;
+}
+
+
+/* Section Heading
+-----------------------------------------------------------------------------*/
+#section {
+  height:          40px;
+  text-align:      center;
+}
+
+
+/* Header
+-----------------------------------------------------------------------------*/
+#header {
+  height:          50px;
+  background:      #BFF08E;
+  text-align:      center;
+}
+
+
+/* Middle
+-----------------------------------------------------------------------------*/
+#content {
+  padding:         0 0 100px;
+}
+
+
+/* Footer
+-----------------------------------------------------------------------------*/
+#footer {
+  height:          50px;
+  background:      #BFF08E;
+  margin-left:auto;
+  margin-right:auto;
+  width: 1000px;
+}
+
+	</style>
+<div id="wrapper">
+
+  <div id="header"> 
+	<div class="left"> <%= link_to 'Guidelines', '/static_pages/guidelines' %> </div>
+	<h1>Lab 1</h1> 
+  </div>
+
+  <div id="content">
+    <div id="section"> <h1>Objectives</h1> </div>
+    <p>
+		After completing this lab you should be able to:
+		<ul>
+			<li>
+				Use the debugger to find errors in your code.
+			</li>
+			<li>
+				See the benefit of writing good tests.
+			</li>
+		</ul>
+	</p>
+
+<!-- ***************************** Pre-lab Exercises ******************************* -->
+    <div id="section"> <h1>Pre-Lab Exercises - 2 points</h1> </div>
+    <p>
+		Complete this section before beginning the lab activities.  This section will be due AT THE TIME YOUR LAB SECTION STARTS.
+    </p>
+    <p>
+		This lab will focus on writing tests for the code that we use and using the debugger in Eclipse.  There are many ways
+		to test programs that we write.  So far, the main technique that you have been taught
+		has been to use print statements in your code so that the console is able to display
+		what is happening in the program.  Examples of this would be printing the value of a 
+		variable before it is used, i.e. i = 7, or having a statement provide an English description of what 
+		code is doing at that time, i.e. "Setting the name of the dog to Bitzy.".  These print statements
+		are great at letting someone who is running the code know what is happening. Today we will work to
+		get those little wrinkles out of our code.		
+	</p>
+	<p>
+		<b>[2 points]</b> Download the <%= link_to "sample.java" %>  file.
+		This program compiles but it is not doing what it should be.  We will use the debugger to fix that.  To tell the debugger where to start
+		looking for problems you will need to place a breakpoint in your code.  To do this double click in the blue margin on the line you want to 
+		look at.  For us, we will want to look at the line where the variable <tt>x_plus_w</tt> is initialized.
+		<%= image_tag("Breakpoint.png", :class => "pic")%><br/><br/>
+		Now click on the button to start the Debugger, it is located next to the run button.
+		<%= image_tag("Debugselect.png", :class => "pic")%><br/><br/>
+		This may ask you to open a new perspective, click yes.  Your screen should now look like this.
+		<%= image_tag("debugperspective.png", :class => "pic")%><br/><br/>
+		In the top right you will see all variables that are currently being used in your program.
+		<%= image_tag("variables.png", :class => "pic")%><br/><br/>
+		You will also see the code that is being run with the current line highlighted.
+		<%= image_tag("code.png", :class => "pic")%><br/><br/>
+		The final area in this perspective that you will want to become familiar with is the console.  This is the same as in the java perspective
+		you are used to, it is where all println statements will show.
+		<%= image_tag("console.png", :class => "pic")%><br/><br/>
+		Now, the controls in this perspective are located at the top of the screen, the two that you will be using throughout the year the most are
+		the step over and step into controls.<br/>
+		<%= image_tag("stepinto.png", :class => "2pic")%><%= image_tag("stepover.png", :class => "2pic")%><br/><br/>
+		These controls will allow you to execute one line of code at a time and view the changes in the variables window.  The Step Into button will 
+		allow you to enter method calls where as the Step Over option will allow you to skip over calls to methods and will just update the variables
+		based on what the method did.<br/>
+		Now use the debugger to trace through the file and find the errors.  Use to comments to see what the program should be doing, and when a variable
+		is given the wrong value stop the debugger by pressing the stop button, located next to the Step Into button. Then enter the Java perspective by 
+		clicking the button in the top right, change the code and then debug again.		
+		<div style = "text-align:center">
+			<%= image_tag("javaperspective.png", :class => "2pic")%><br/><br/>
+		</div>
+		Submit the fixed file so that it can run with no errors.  After you have done that, describe a time when you had a bug in you code and the 
+		debugger would have been helpful in a text file. This answer will be submitted as part of your pre-lab solutions.
+	</p>
+	
+    
+<!-- ********************************* Activity ************************************ -->
+    <div id="section"> <h1>Lab Activity - 8 points</h1> </div>
+    <p>
+		<h2>What you are given:</h2>
+		<ul>
+			<li> <%= link_to "MyClass.java" %></li>
+		</ul>
+
+		<h2>What you have to do:</h2>
+		<ul>
+			<li>
+				Today you are given a class file that an imaginary student has written.  The student has taken
+				COSC 111 but has forgotten some things over the holiday.  They wrote code that compiles but does
+				not do what is desired.  Luckily, this student uses good coding practice and left us lots of good
+				comments about what the code SHOULD be doing.  Your job will be to write a class that will actually
+				do what the comments say this class should be doing.
+			</li>
+			<li>
+				<b>[1 point]</b>Start by creating a test class in Eclipse, call it <tt>Test.java</tt>.  In this class 
+				have a main method and write tests for all of the methods in <tt>MyClass</tt>.  You should use print 
+				statements so that you can see what is happening in each method.  Take the output from testing all the methods
+				and put it in a file called <tt>WrongOutput.txt</tt>.  This will be handed in as part of your solutions.
+			</li>
+			<li>
+				<b>[6 points]</b> Now create a new class and write correct versions of all methods from <tt>MyClass.java</tt>.
+				Correct is defined by doing what the comments say should be happening.  You can continue to use print statements 
+				and looking at the code to find the errors or you can use your new skills with the debugger to speed up the process.
+				When you think you have fixed everything run your test class on your new class instead of <tt>MyClass</tt>. Take the 
+				output from testing all the methods	and put it in a file called <tt>CorrectOutput.txt</tt>.  This will be handed in 
+				as part of your solutions.  
+			</li>
+			<li>
+				<b>[1 point]</b> After you are done this describe a scenario, either from your experience or from your imagination,
+				where writing test BEFORE writing the code would be beneficial.  Put this answer in a file called <tt>TestFirst.txt</tt>.
+				This will be handed in as part of your solutions.
+			</li>
+		</ul>
+	</p>
+	<div id="section"> 
+		<h1>Conceptual Questions</h1> 
+	</div>
+		<ul>
+			<li>
+				Why do we need to test our code if it does what we want when we run it?
+			</li>
+			<li>
+				What are the advantgaes of writing good tests?
+			</li>
+			<li>
+				How does testing apply to pair programming i.e. the group work that you did in labs last semester?
+			</li>
+		</ul>
+    <div id="section"> 
+		<h1>What to Submit</h1> 
+	</div>
+    <p>
+		When you are ready to have your lab graded, submit the following:
+    </p>
+    <ul>
+		<li> 
+			Your test file 
+		</li>
+		<li> 
+			Your class file with the methods done correctly
+		</li>
+		<li> 
+			Your <tt>WrongOutput.txt</tt> file.
+		</li>
+		<li> 
+			Your <tt>CorrectOutput.txt</tt> file.
+		</li>
+		<li> 
+			Your <tt>TestFirst.txt</tt> file.
+		</li>
+    </ul>
+</div><!-- #content-->
+</div><!-- #wrapper -->
+<div id="footer">
+    <div class="right"> <%= link_to 'Next Lab', '/static_pages/lab02' %></div>
+</div><!-- #footer -->
+</body>
+</html>

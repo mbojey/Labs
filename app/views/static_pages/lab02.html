@@ -1,0 +1,309 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+	<title></title>
+	<meta name="keywords" content="" />
+	<meta name="description" content="" />
+	<link rel="stylesheet" href="style.css" type="text/css" media="screen, projection" />
+</head>
+
+<body>
+	<style =  "text/css">
+	.pic{
+    width: 950px;
+	}
+	.2pic{
+    width: 475px;
+	}
+	* {
+  margin:          0;
+  padding:         0;
+}
+html {
+  height:          100%;
+}
+body {
+  font:            12px/18px Arial, Tahoma, Verdana, sans-serif;
+  width:           100%;
+  height:          100%;
+  background: rgb(250, 255, 239);
+  font-size:       14px;
+}
+h1 {
+  font-size:       24px;
+  padding:         0px;
+  padding-bottom:  4px;
+  padding-top:     12px;
+  padding-left:    12px;
+  margin:          0px 0px 0px 0px;
+  color:           black;
+}
+h2 {
+  font-size:       18px;
+  padding:         0px;
+  padding-bottom:  4px;
+  padding-top:     12px;
+  padding-left:    12px;
+  margin:          0px 0px 0px 0px;
+}
+a {
+  color: rgb(52, 192, 17);
+  outline:         none;
+  text-decoration: underline;
+}
+a:hover {
+  color: rgb(59, 97, 21);
+  text-decoration: none;
+}
+a:visited {
+  color: rgb(59, 97, 21);
+  text-decoration: underline;
+}
+p {
+  margin:          0 0 18px
+  padding:         0px;
+  padding-bottom:  4px;
+  padding-top:     12px;
+  padding-left:    12px;
+}
+
+hr {
+  height: 1px;
+  color: rgb(18, 97, 18);
+  background-color: rgb(18, 97, 18);
+}
+
+ol {
+  margin:          0px; 
+  margin-top:      10px; 
+  margin-left:     20px; 
+  margin-bottom:   10px; 
+  padding:         0px; 
+  padding-left:    10px; 
+}
+
+ul {
+  margin:          0px; 
+  margin-top:      10px; 
+  margin-left:     20px; 
+  margin-bottom:   10px; 
+  padding:         0px; 
+  padding-left:    10px; 
+}
+
+li {
+  list-style:      circle; 
+}
+
+table {
+  border-spacing:  0; 
+  border-collapse: collapse;
+}
+table td, table th {
+  padding:         10; 
+}
+img {
+  border:          none;
+}
+input {
+  vertical-align:  middle;
+}
+#wrapper {
+  width:           1000px;
+  margin:          0 auto;
+  min-height:      90%;
+  height:          auto !important;
+  height:          100%;
+}
+
+.left {
+  padding:         0px;
+  padding-top:     12px;
+  padding-left:    12px;
+  float:           left;
+}
+
+.right {
+  padding:         0px;
+  padding-top:     12px;
+  padding-right:   12px;
+  float:           right;
+}
+
+
+/* Listing Items 
+-----------------------------------------------------------------------------*/
+#listing {
+  margin-top:      20px;
+  margin-left:     20px;
+}
+
+
+/* Section Heading
+-----------------------------------------------------------------------------*/
+#section {
+  height:          40px;
+  text-align:      center;
+}
+
+
+/* Header
+-----------------------------------------------------------------------------*/
+#header {
+  height:          50px;
+  background:      #BFF08E;
+  text-align:      center;
+}
+
+
+/* Middle
+-----------------------------------------------------------------------------*/
+#content {
+  padding:         0 0 100px;
+}
+
+
+/* Footer
+-----------------------------------------------------------------------------*/
+#footer {
+  height:          50px;
+  background:      #BFF08E;
+  margin-left:auto;
+  margin-right:auto;
+  width: 1000px;
+}
+
+	</style>
+<div id="wrapper">
+
+  <div id="header">
+<div class="left"> <%= link_to 'Guidelines', '/static_pages/guidelines' %> </div>  <h1>Lab 2</h1> </div>
+
+  <div id="content">
+    <div id="section"> <h1>Objectives</h1> </div>
+	<p>
+		After completing this lab you should be able to:
+		<ul>
+			<li>
+				Identify when to use the concept of inheritance in design.
+			</li>
+			<li>
+				Be able to implement inheritance.
+			</li>
+		</ul>
+	</p>
+
+<!-- ***************************** Pre-lab Exercises ******************************* -->
+    <div id="section"> <h1>Pre-Lab Exercises</h1> </div>
+    <p>
+    Complete this section individually before beginning the lab activities. This section will be due AT THE TIME YOUR LAB SECTION STARTS.
+    </p>
+	<p>
+		Exercise 1 </br>
+		<b>[1 point] </b>In lecture and in your readings (pp 443 - 468) you have seen many examples of inheritance in classes. Given the
+		following classes create an inheritance diagram, similar to Figure 9.3 on pg. 458.
+		<ul>
+		<li>Sports</li>
+		<li>Video_Games</li>
+		<li>Work</li>
+		<li>Studying</li>
+		<li>Activity</li>
+		<li>Play</li>
+		<li>Homework</li>
+		</ul>
+		Exercise 2</br>
+		<b>[1 point] </b> Determine where to put the following attributes or methods.  
+		<ul>
+		<li><tt>int time_taken</tt></li>
+		<li><tt>String ball_used</tt></li>
+		<li><tt>String course</tt></li>
+		<li><tt>void submit_assignment(Assignment a)</tt></li>
+		</ul>
+		
+		Hand in your answers before your lab section starts.
+	</p>
+    
+<!-- ********************************* Activity 1 ********************************* -->
+    <div id="section"> <h1>Lab Activity - 8 points</h1> </div>
+    
+   <p>
+	<h2>What you are given:</h2>
+	<ul>
+		<li>The <%=link_to "FeedMe"%> java files from last semester</li>
+	</ul>
+
+<h2>What you have to do:</h2>
+<ul>
+    <li>In lecture you have examples of inheritance and seen the advantages 
+	    it gives, such as not needing to rewrite code.  Today we will be making 
+	    changes to the <tt>FeedMe</tt> game to take advantage of this fact so that we 
+		can make a more robust game.  At the end of the lab we will have 2 different classes for 2 different types of fruit.
+	</li>
+	<li><b>[1 point]</b> Create a new class and call it <tt>Fruit</tt>.  This will be the
+	    parent class that you will work with today.  Make this an abstract class as it will not have a constructor.
+	</li>
+	<li><b>[1 point]</b>Make the <tt>Apple</tt> class extend the <tt>Fruit</tt> class.  This is because
+		an <tt>Apple</tt> is a <tt>Fruit</tt>.  This is similar to what you have seen in the book with 
+		a <tt>Horse</tt> class extending a <tt>Mammal</tt> class.  Inheritance always represents an "is a"
+		relationship between object types.
+	</li>
+	<li><b>[2 points]</b>Take all the attributes OUT of the <tt>Apple</tt> class and put them IN the
+	    <tt>Fruit</tt> class.  Make sure that you use the correct visibility modifier.  We will 
+		need to access the attributes from any child classes.  However, the attributes 
+		will still need to be treated as private from any non-child or descendant classes.
+	</li>
+	<li><b>[2 points]</b>Take all the methods OUT of the <tt>Apple</tt> class and put them IN the
+	    <tt>Fruit</tt> class.  Here we will keep the visibility modifiers that the methods had in the 
+		<tt>Apple</tt> class.  There is no need to change anything as methods that previously needed to 
+		be <tt>public</tt> will still need to be accessed by other , non-related classes.
+	</li>
+	<li><b>[2 points]</b>Now all that should be in the <tt>Apple</tt> class should be a constructor.  As
+        this class is very simple, we can see that it is very easy to add new types of <tt>Fruit</tt> to 
+		the game.  Create a new class that will be a new type of <tt>Fruit</tt>.  Make this class a child of 
+		the <tt>Fruit</tt> class with the extends keyword and write a constructor for this new class.  Make
+        sure to create a new .png file for the new <tt>Fruit</tt> so a player can tell the difference.
+	</li>
+	<li>Now you're done!  In the next couple weeks we will be able to have the two types of <tt>Fruit</tt> in 
+	    the game at the same time!
+	</li>
+</ul>
+
+<h2>What you should think about during this activity:</h2>
+<ul>
+    <li>What are the other advantages of inheritance?</li>
+	<li>What are some possible disadvantages of inheritance?</li>
+	<li>What would happen if we used shadow variables?</li>
+	<li>What are some examples of overridden methods that are advantageous? <i>Hint:  
+	    All methods have a default <tt>toString()</tt> method from the <tt>Object</tt> class</i>
+	</li>
+</ul>
+</p>
+<!-- ********************************* Submission ********************************* -->
+    <div id="section"> <h1>What to Submit</h1> </div>
+    <p>
+    When you are ready to have your lab graded, submit the following:
+    </p>
+    <ul>
+    <li>
+		Your <tt>Apple.java</tt> file and associated .png file.
+	</li>
+	<li>
+		Your <tt>Fruit.java</tt> file
+	</li>
+	<li>
+		Your other fruit file and associated .png file.
+	</li>
+    </ul>
+
+  </div><!-- #content-->
+
+</div><!-- #wrapper -->
+
+  <div id="footer">
+    <div class="left">  <%= link_to 'Prev Lab', '/static_pages/lab01' %></div>
+    <div class="right"> <%= link_to 'Next Lab', '/static_pages/lab03' %></div>
+  </div><!-- #footer -->
+
+
+</body>
+</html>

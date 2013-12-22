@@ -1,0 +1,324 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+	<title></title>
+	<meta name="keywords" content="" />
+	<meta name="description" content="" />
+	<link rel="stylesheet" href="style.css" type="text/css" media="screen, projection" />
+</head>
+
+<body>
+	<style =  "text/css">
+	.pic{
+    width: 950px;
+	}
+	.2pic{
+    width: 475px;
+	}
+	* {
+  margin:          0;
+  padding:         0;
+}
+html {
+  height:          100%;
+}
+body {
+  font:            12px/18px Arial, Tahoma, Verdana, sans-serif;
+  width:           100%;
+  height:          100%;
+  background: rgb(250, 255, 239);
+  font-size:       14px;
+}
+h1 {
+  font-size:       24px;
+  padding:         0px;
+  padding-bottom:  4px;
+  padding-top:     12px;
+  padding-left:    12px;
+  margin:          0px 0px 0px 0px;
+  color:           black;
+}
+h2 {
+  font-size:       18px;
+  padding:         0px;
+  padding-bottom:  4px;
+  padding-top:     12px;
+  padding-left:    12px;
+  margin:          0px 0px 0px 0px;
+}
+a {
+  color: rgb(52, 192, 17);
+  outline:         none;
+  text-decoration: underline;
+}
+a:hover {
+  color: rgb(59, 97, 21);
+  text-decoration: none;
+}
+a:visited {
+  color: rgb(59, 97, 21);
+  text-decoration: underline;
+}
+p {
+  margin:          0 0 18px
+  padding:         0px;
+  padding-bottom:  4px;
+  padding-top:     12px;
+  padding-left:    12px;
+}
+
+hr {
+  height: 1px;
+  color: rgb(18, 97, 18);
+  background-color: rgb(18, 97, 18);
+}
+
+ol {
+  margin:          0px; 
+  margin-top:      10px; 
+  margin-left:     20px; 
+  margin-bottom:   10px; 
+  padding:         0px; 
+  padding-left:    10px; 
+}
+
+ul {
+  margin:          0px; 
+  margin-top:      10px; 
+  margin-left:     20px; 
+  margin-bottom:   10px; 
+  padding:         0px; 
+  padding-left:    10px; 
+}
+
+li {
+  list-style:      circle; 
+}
+
+table {
+  border-spacing:  0; 
+  border-collapse: collapse;
+}
+table td, table th {
+  padding:         10; 
+}
+img {
+  border:          none;
+}
+input {
+  vertical-align:  middle;
+}
+#wrapper {
+  width:           1000px;
+  margin:          0 auto;
+  min-height:      90%;
+  height:          auto !important;
+  height:          100%;
+}
+
+.left {
+  padding:         0px;
+  padding-top:     12px;
+  padding-left:    12px;
+  float:           left;
+}
+
+.right {
+  padding:         0px;
+  padding-top:     12px;
+  padding-right:   12px;
+  float:           right;
+}
+
+
+/* Listing Items 
+-----------------------------------------------------------------------------*/
+#listing {
+  margin-top:      20px;
+  margin-left:     20px;
+}
+
+
+/* Section Heading
+-----------------------------------------------------------------------------*/
+#section {
+  height:          40px;
+  text-align:      center;
+}
+
+
+/* Header
+-----------------------------------------------------------------------------*/
+#header {
+  height:          50px;
+  background:      #BFF08E;
+  text-align:      center;
+}
+
+
+/* Middle
+-----------------------------------------------------------------------------*/
+#content {
+  padding:         0 0 100px;
+}
+
+
+/* Footer
+-----------------------------------------------------------------------------*/
+#footer {
+  height:          50px;
+  background:      #BFF08E;
+  margin-left:auto;
+  margin-right:auto;
+  width: 1000px;
+}
+
+	</style>
+<div id="wrapper">
+
+  <div id="header"> 
+  <div class="left"> <%= link_to 'Guidelines', '/static_pages/guidelines' %></div><h1>Lab 5</h1> </div>
+
+  <div id="content">
+    <div id="section"> <h1>Objectives</h1> </div>
+	<p>
+		After completing this lab you should be able to:
+		<ul>
+			<li>
+				Write text to a file from a java program.
+			</li>
+			<li>
+				Read text from a file with a java program.
+			</li>
+			<li>
+				Understand exception handling in java.
+			</li>
+		</ul>
+	</p>
+
+<!-- ***************************** Pre-lab Exercises ******************************* -->
+    <div id="section"> <h1>Pre-Lab Exercises</h1> </div>
+    <p>
+    Complete this section individually before beginning the lab activities. This section will be due AT THE TIME YOUR LAB SECTION STARTS.
+    </p>
+	<p>
+		Exercise 1 </br>
+		<b>[1 point] </b> Given the following code, say what would be printed in each situation.</br>
+		<tt> &nbsp&nbsp&nbsp&nbsptry{
+			</br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbspwriter.println("This line may cause an exception");
+			</br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbspSystem.out.println("Write successful");
+			</br>&nbsp&nbsp&nbsp&nbsp}catch(IOException e){
+			</br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbspSystem.out.println("There was an error");
+			</br>&nbsp&nbsp&nbsp&nbsp}finally{
+			</br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbspscanner.close();
+			</br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbspSystem.out.println("Scanner closed");
+			</br>&nbsp&nbsp&nbsp&nbsp}
+			</br></tt>
+		<ol>
+			<li>There is an exception thrown on line 2.</li>
+			<li>There is not an exception thrown on line 2.</li>
+		</ol>
+	</p>
+	<p>
+		Exercise 2 </br>
+		<b>[1 point] </b> Answer the following true/false questions about exceptions.  If you answer false explain why.
+		<ol>
+			<li>A try statement can have more than one catch clause.</li>
+			<li>A finally clause is only run if no exceptions are thrown in the try statement.</li>
+			<li>A try statement needs both a catch clause and a finally clause to compile.</li>
+			<li>A catch clause can compile with no parameters.</li>
+		</ol>
+		Hand in your answers before your lab section starts.
+	</p>
+<!-- ********************************* Activity 1 ********************************* -->
+    <div id="section"> <h1>Lab Activity - 8 points</h1> </div>
+ <p>
+<h2>What you are given:</h2>
+<ul>
+	<li>Your work from previous labs</li>
+</ul>
+
+<h2>What you have to do:</h2>
+<ul>
+    <li>As you have experienced, when we turn off the computer anything that our program has done
+	    will be lost, unless we have saved it to a file.  Today you will be doing just that.  When you
+        have completed todays lab you will be able to save the highscore of the game and keep that saved 
+        after the game is over and the application has been closed.		
+	</li>
+	<li><b>[2 points]</b> Today all of the work will be taking place within your <tt>Board</tt> class.  You will start but writing the score at the end of a game to a .txt 
+		file.  In the paint method, find the line where you print the score to the screen at the end of a game.
+		After this line create a <tt>try-catch</tt> block as you have seen before.  This will look like:</br><tt>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;try{</br>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}catch(Exception e){}</br></tt>
+		Change the <tt>Exception e</tt> to <tt>IOExcetion e</tt>.  You will need to import the <tt>IOException</tt> class from</br><tt>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; java.io.IOException</br></tt>
+		to do this.  You do this because we are going to be writing to a file
+		which may cause an IOException if not done correctly, which is why we will catch it.  However, if any other
+		exception occurs it would be very unexpected at this point an we want to have it thrown so that we will be
+		made aware of it.
+	</li>
+	<li><b>[1 point]</b>Inside the <tt>catch</tt> block you need to add some code.  This code will need to do two things:
+	    <ul>
+		    <li>Print a message telling the user there was an IO exception.</li>			
+		    <li>Print the stack trace of this exception using the <tt>e.printStackTrace()</tt> method.</li>
+	    </ul>
+	</li>
+	<li><b>[1 point]</b>Now you will fill in the <tt>try</tt> part of the <tt>try-catch</tt> block.  Here we will use a class
+	    called the <tt>PrintWriter</tt>.  There are many ways to write to files in Java, for our purposes this one will work
+		just fine. Start by importing the <tt>PrintWriter</tt> class, it is found in</br><tt>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; java.io.PrintWriter</br></tt>
+		Now create a new <tt>PrintWriter</tt> object.  The constructor will expect a <tt>String</tt> that will be the file name.  Call
+		your new file 'score.txt'. Now, using the <tt>println()</tt> method from the <tt>PrintWrite</tt>, write the current score to the file.  Finally we must
+		close the writer in a finally clause.
+	</li>
+	<li><b>[1 point]</b>Now you have a way to store the score of the current round.  You will need to add a way to see if the
+	    score is the highest score ever now.  To do this we will need to read from the 'score.txt' file.  To do this you will 
+		use a <tt>Scanner</tt> object.  Don't forget to import the <tt>Scanner</tt> class from:</br><tt>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; java.util.Scanner</br></tt>
+		Create a new <tt>Scanner</tt> object but instead of passing <tt>System.in</tt> as the parameter, pass in a File object.  To do this
+		create a new File with the parameter being the name of the file you will be reading from as a <tt>String</tt>.  Don't forget to import:</br><tt>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; java.io.File</br></tt> 
+	</li>
+	<li><b>[1 point]</b>Now you will want to read the content of the file and store that result.  Note that looking for an integer
+	    when there are none there is not something you will want to do.  Write an if statement to avoid this and read the integer 
+		from the file the same way you would read one from the keyboard using the <tt>Scanner</tt> object.
+	</li>
+	<li><b>[2 points]</b>Now that you know what the high score is, check if the current score if higher.  If it is, write it to the 
+	    file using the <tt>PrintWriter</tt> object.  The way you have set up your <tt>PrintWriter</tt> it will overwrite the contents of the file not 
+		append to it, which is what you want.  When you do this, write a short message to the user letting them know that they
+		got the high score.  This is done with:</br><tt>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; g2d.drawString( "Your Message Here", 200, 450 );</br></tt>
+		Depending on the length of your message, you may want to play with the first integer parameter, the x position on the screen
+		to centre the message.
+    </li>
+</ul>
+
+<h2>What you should think about during this activity:</h2>
+<ul>
+    <li>Where are the places we could have caused an IO Exception? </li>
+	<li>What other information may we want to give ourselves in the <tt>catch</tt> statment?</li>
+	<li>We are currently only checking for the highest score, but what about checking the <tt>score / possibleScore</tt>?  
+	    What would we need to write to the file to implement this?
+	</li>
+</ul>
+</p>
+<!-- ********************************* Submission ********************************* -->
+    <div id="section"> <h1>What to Submit</h1> </div>
+    <p>
+    When you are ready to have your lab graded, submit the following:
+    </p>
+    <ul>
+    <li><tt>Board.java</tt></li>
+    </ul>
+
+  </div><!-- #content-->
+
+</div><!-- #wrapper -->
+
+  <div id="footer">
+    <div class="left">  <%= link_to 'Prev Lab', '/static_pages/lab04' %> </div>
+  </div><!-- #footer -->
+
+
+</body>
+</html>

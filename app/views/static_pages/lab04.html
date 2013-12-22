@@ -1,0 +1,305 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+	<title></title>
+	<meta name="keywords" content="" />
+	<meta name="description" content="" />
+	<link rel="stylesheet" href="style.css" type="text/css" media="screen, projection" />
+</head>
+
+<body>
+	<style =  "text/css">
+	.pic{
+    width: 950px;
+	}
+	.2pic{
+    width: 475px;
+	}
+	* {
+  margin:          0;
+  padding:         0;
+}
+html {
+  height:          100%;
+}
+body {
+  font:            12px/18px Arial, Tahoma, Verdana, sans-serif;
+  width:           100%;
+  height:          100%;
+  background: rgb(250, 255, 239);
+  font-size:       14px;
+}
+h1 {
+  font-size:       24px;
+  padding:         0px;
+  padding-bottom:  4px;
+  padding-top:     12px;
+  padding-left:    12px;
+  margin:          0px 0px 0px 0px;
+  color:           black;
+}
+h2 {
+  font-size:       18px;
+  padding:         0px;
+  padding-bottom:  4px;
+  padding-top:     12px;
+  padding-left:    12px;
+  margin:          0px 0px 0px 0px;
+}
+a {
+  color: rgb(52, 192, 17);
+  outline:         none;
+  text-decoration: underline;
+}
+a:hover {
+  color: rgb(59, 97, 21);
+  text-decoration: none;
+}
+a:visited {
+  color: rgb(59, 97, 21);
+  text-decoration: underline;
+}
+p {
+  margin:          0 0 18px
+  padding:         0px;
+  padding-bottom:  4px;
+  padding-top:     12px;
+  padding-left:    12px;
+}
+
+hr {
+  height: 1px;
+  color: rgb(18, 97, 18);
+  background-color: rgb(18, 97, 18);
+}
+
+ol {
+  margin:          0px; 
+  margin-top:      10px; 
+  margin-left:     20px; 
+  margin-bottom:   10px; 
+  padding:         0px; 
+  padding-left:    10px; 
+}
+
+ul {
+  margin:          0px; 
+  margin-top:      10px; 
+  margin-left:     20px; 
+  margin-bottom:   10px; 
+  padding:         0px; 
+  padding-left:    10px; 
+}
+
+li {
+  list-style:      circle; 
+}
+
+table {
+  border-spacing:  0; 
+  border-collapse: collapse;
+}
+table td, table th {
+  padding:         10; 
+}
+img {
+  border:          none;
+}
+input {
+  vertical-align:  middle;
+}
+#wrapper {
+  width:           1000px;
+  margin:          0 auto;
+  min-height:      90%;
+  height:          auto !important;
+  height:          100%;
+}
+
+.left {
+  padding:         0px;
+  padding-top:     12px;
+  padding-left:    12px;
+  float:           left;
+}
+
+.right {
+  padding:         0px;
+  padding-top:     12px;
+  padding-right:   12px;
+  float:           right;
+}
+
+
+/* Listing Items 
+-----------------------------------------------------------------------------*/
+#listing {
+  margin-top:      20px;
+  margin-left:     20px;
+}
+
+
+/* Section Heading
+-----------------------------------------------------------------------------*/
+#section {
+  height:          40px;
+  text-align:      center;
+}
+
+
+/* Header
+-----------------------------------------------------------------------------*/
+#header {
+  height:          50px;
+  background:      #BFF08E;
+  text-align:      center;
+}
+
+
+/* Middle
+-----------------------------------------------------------------------------*/
+#content {
+  padding:         0 0 100px;
+}
+
+
+/* Footer
+-----------------------------------------------------------------------------*/
+#footer {
+  height:          50px;
+  background:      #BFF08E;
+  margin-left:auto;
+  margin-right:auto;
+  width: 1000px;
+}
+
+	</style>
+<div id="wrapper">
+
+<div id="header"> 
+<div class="left"> <%= link_to 'Guidelines', '/static_pages/guidelines' %></div><h1>Lab 4</h1> </div>
+
+  <div id="content">
+    <div id="section"> <h1>Objectives</h1> </div>
+	<p>
+		After completing this lab you should be able to:
+		<ul>
+			<li>
+				Be comfortable working with polymorphism.
+			</li>
+			<li>
+				Understand the benefits and power of polymorphism.
+			</li>
+		</ul>
+	</p>
+
+<!-- ***************************** Pre-lab Exercises ******************************* -->
+    <div id="section"> <h1>Pre-Lab Exercises</h1> </div>
+    <p>
+    Complete this section individually before beginning the lab activities. This section will be due AT THE TIME YOUR LAB SECTION STARTS.
+    </p>
+	<p>
+		Exercise 1 </br>
+		<b>[1 point] </b> In your own words describe what polymorphism is.  This should only take a sentence or two.
+	</p>
+	<p>
+		Exercise 2 </br>
+		<b>[1 point] </b> You have an interface called Sprite in your program.  You are therefore able to create a variable of type Sprite i.e.
+		</br>
+		&nbsp&nbsp&nbsp&nbsp&nbsp<tt>Sprite x;</tt>
+		</br>
+		What would be valid types to store in this variable?  That is, what could you fill in the blanks below with?
+		</br>
+		&nbsp&nbsp&nbsp&nbsp&nbsp<tt>x = new ________________(________);</tt>
+		</br>
+		Hand in your answers before your lab section starts.
+	</p>
+<!-- ********************************* Activity 1 ********************************* -->
+    <div id="section"> <h1>Lab Activity - 8 points</h1> </div>
+   <p>
+<h2>What you are given:</h2>
+<ul>
+	<li>Your work from previous labs</li>
+</ul>
+
+<h2>What you have to do:</h2>
+<ul>
+    <li>Today all of your hard work with interfaces and inheritance will finally pay off.  
+	    You will be working the concept of polymorphism to allow you to drop different types 
+		of fruits with different score values each!  
+	</li>
+	<li><b>[1 point]</b> The first thing you will need to do it to open your <tt>Drop</tt>  
+	    class.  In these classes we will need to make some changes to the targets object. 
+	    Currently it is an <tt>ArrayList</tt> storing <tt>Apple</tt> objects.  We want it to store <tt>Fruit</tt> objects 
+	    so that we can have both types of <tt>Fruit</tt>.
+	</li>
+	<ul>
+	    <li><b>[1 point]</b> You will notice that this change will cause many errors in the code.  
+		    To fix these errors we will need to change the type of objects stored in the <tt>ArrayLists</tt> 
+			in the <tt>Board</tt> class to <tt>Fruit</tt> as well.  This will cause even more errors.
+	    </li>
+	    <li><b>[1 point]</b> To fix these errors we need to update any object type pulled from 
+		    the <tt>ArrayList</tt> to <tt>Fruit</tt> from <tt>Apple</tt>.
+	    </li>
+	</ul>
+	<li>Now you can add any type of fruit you want to the <tt>ArrayList</tt> of fruit to be dropped during 
+	    the game.  Let’s make it so that you get different <tt>Fruit</tt> everytime.
+	</li>
+	<li><b>[1 point]</b>In the <tt>dropIt()</tt> method of the <tt>Drop</tt> class we will want to use the random 
+	    variable r to determine whether to add an <tt>Apple</tt> or a different piece of fruit.  Use the 
+		mod(%) function and a conditional statement to make this dream a reality. 
+	</li>
+	<ul>
+		<li><b>[1 point]</b>Now add a <tt>score</tt> attribute to the <tt>Fruit</tt> class.  Also write a public method
+		    called <tt>getScore()</tt> that, as expected, returns the value of score.
+		</li>
+		<li><b>[1 point]</b>Change the constructor of the <tt>Apple</tt> and other fruit class so that they take
+		    a third <tt>int</tt> parameter that is the number of points the fruit is worth.  Set the <tt>score</tt> attribute
+			to this parameter.
+		</li>
+		<li><b>[1 point]</b>As you add the <tt>Fruit</tt> to the <tt>ArrayList</tt> we need to update to maximum possible 
+		    score.  Create an attribute in the <tt>Drop</tt> class called <tt>possibleScore</tt> and store this value there. 
+			This variable should be <tt>static</tt>.  Write a getter (accessor) for this attribute call it <tt>getPossibleScore()</tt>.
+		</li>
+		<li><b>[1 point]</b>Now you will change how we keep track of the score in the <tt>Board</tt> class and what score
+    		we return to the user.  To do this change the</br><tt>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;score++</br></tt>
+            line in the <tt>checkCollision()</tt> method to instead add the <tt>score</tt> of the current <tt>Fruit</tt> and change the 
+			<tt>dropper.getMax()</tt> call in the <tt>paint()</tt> method to instead show the <tt>possibleScore</tt>.
+		</li>
+	</ul>
+</ul>
+
+<h2>What you should think about during this activity:</h2>
+<ul>
+    <li>What advantages does polymorphism give you in this activity? </li>
+	<li>Would what we have done be possible without polymorphism?  If yes, would it be easier or harder?</li>
+	<li>Are there any disadvantages to polymorphism?  If yes, what are they?</li>
+	<li>In this activity we used polymorphism through inheritance, could we have used polymorphism through interfaces instead?</li>
+</ul>
+</p>
+<!-- ********************************* Submission ********************************* -->
+    <div id="section"> <h1>What to Submit</h1> </div>
+    <p>
+    When you are ready to have your lab graded, submit the following:
+    </p>
+    <ul>
+    <li><tt>Drop.java</tt></li>
+	<li><tt>Board.java</tt></li>
+	<li><tt>Fruit.java</tt></li>
+	<li><tt>Apple.java</tt></li>
+	<li><tt>.java</tt> files for any other fruits you have in your game</li>
+    </ul>
+
+  </div><!-- #content-->
+
+</div><!-- #wrapper -->
+
+  <div id="footer">
+    <div class="left">  <%= link_to 'Prev Lab', '/static_pages/lab03' %> </div>
+    <div class="right"> <%= link_to 'Next Lab', '/static_pages/lab05' %> </div>
+  </div><!-- #footer -->
+
+
+</body>
+</html>
